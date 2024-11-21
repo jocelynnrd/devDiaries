@@ -1,4 +1,3 @@
-// controllers/index.js
 import homeRoutes from './homeRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import postRoutes from './routes/postRoutes.js';

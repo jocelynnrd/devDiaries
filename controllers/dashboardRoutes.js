@@ -1,4 +1,3 @@
-// controllers/dashboardRoutes.js
 import express from 'express';
 import { Post, User } from '../models/index.js';
 import withAuth from '../utils/auth.js';

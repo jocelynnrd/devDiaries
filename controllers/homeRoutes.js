@@ -1,6 +1,5 @@
-// controllers/homeRoutes.js
 import express from 'express';
-import { Post } from '../models/index.js'; // Assuming this is how you import the Post model
+import { Post } from '../models/index.js'; 
 import { User } from '../models/index.js';
 import withAuth from '../utils/auth.js';
 

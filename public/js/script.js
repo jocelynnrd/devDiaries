@@ -83,7 +83,7 @@ const commentFormHandler = async (event) => {
     event.preventDefault();
   
     const content = document.querySelector('#comment-content').value.trim();
-    const postId = document.querySelector('#post-id').value; // Assuming post ID is stored in a hidden input field
+    const postId = document.querySelector('#post-id').value; 
   
     if (content) {
       const response = await fetch(`/api/comments`, {

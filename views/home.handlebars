@@ -1,0 +1,25 @@
+<main>
+  <h1>Welcome to Tech Blog</h1>
+  
+  {{#if posts.length}} <!-- Check if there are posts -->
+    <section class="post-list">
+      <h2>Recent Posts</h2>
+      <ul>
+        {{#each posts}} <!-- Loop through posts -->
+          <li>
+            <a href="/posts/{{this.id}}">
+              <h3>{{this.title}}</h3>
+              <p>{{this.excerpt}}</p> <!-- Show an excerpt of the post -->
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+  {{else}}
+    <p>No posts yet! Check back later.</p>
+  {{/if}}
+
+  <footer>
+    <p>&copy; {{year}} Tech Blog. All rights reserved.</p>
+  </footer>
+</main>
