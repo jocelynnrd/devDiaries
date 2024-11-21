@@ -1,8 +1,8 @@
 import path from 'path';
 import express from 'express';
-import routes from './controllers/index.js'; // Adjusted to match ES module syntax
+import routes from './controllers/index.js'; 
 import { sequelize } from './config/connection.js'; // Import sequelize as an object
-import helpers from './utils/helpers.js'; // Assuming helpers is a default export
+import helpers from './utils/helpers.js'; 
 import exphbs from 'express-handlebars';
 import session from 'express-session';
 import SequelizeStore from 'connect-session-sequelize';
