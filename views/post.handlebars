@@ -1,0 +1,43 @@
+<div class="post-container">
+  <!-- Blog Post Details -->
+  <article class="post">
+    <h1>{{title}}</h1>
+    <p class="post-meta">
+      By <strong>{{creator}}</strong> on <em>{{createdAt}}</em>
+    </p>
+    <div class="post-content">
+      <p>{{content}}</p>
+    </div>
+  </article>
+
+  <!-- Comments Section -->
+  <section class="comments-section">
+    <h2>Comments</h2>
+
+    {{#if comments.length}}
+      <ul class="comments-list">
+        {{#each comments}}
+          <li class="comment">
+            <p><strong>{{this.commenter}}</strong> said on {{this.createdAt}}:</p>
+            <p>{{this.commentText}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>No comments yet. Be the first to add one!</p>
+    {{/if}}
+  </section>
+
+  <!-- Add Comment Section -->
+  {{#if userLoggedIn}}
+    <section id="add-comment">
+      <h3>Add a Comment</h3>
+      <form id="comment-form">
+        <textarea id="comment-text" name="comment" rows="3" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+    </section>
+  {{else}}
+    <p><a href="/login">Log in</a> to add a comment.</p>
+  {{/if}}
+</div>
