@@ -1,19 +1,18 @@
-import { Router } from 'express';
-import apiRoutes from './api';
-import homeRoutes from './homeRoutes';
-import dashboardRoutes from './dashboardRoutes';
+// controllers/index.js
+import homeRoutes from './homeRoutes.js';
+import userRoutes from './routes/userRoutes.js';
+import postRoutes from './routes/postRoutes.js';
+import dashboardRoutes from './dashboardRoutes.js';
+import commentRoutes from './routes/commentRoutes.js';
 
-const router = Router();
+const routes = {
+    homeRoutes,
+    userRoutes,
+    postRoutes,
+    dashboardRoutes,
+    commentRoutes
+};
 
-// Set up route paths
-router.use('/', homeRoutes);             // Routes for the homepage and public pages
-router.use('/dashboard', dashboardRoutes); // Routes for the user's dashboard
-router.use('/api', apiRoutes);             // API routes for user, post, and comment actions
+export default routes;
 
-// Handle 404 - Route not found
-router.use((req, res) => {
-  res.status(404).end();
-});
-
-export default router;
 

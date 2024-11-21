@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { Comment, User } from '../../models/index.js';
-import { withAuth } from '../../utils/auth.js'; 
+import { withAuth } from '../../utils/auth.js'; //the path isnt working so im having trouble
 
 
 const router = Router();

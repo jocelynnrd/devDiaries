@@ -1,9 +1,7 @@
-export const withAuth = (req, res, next) => {
-    if (!req.session.user_id) {
+export default function withAuth(req, res, next) {
+  if (!req.session.logged_in) {
       res.redirect('/login');
-    } else {
+  } else {
       next();
-    }
-  };
-  
-  export default withAuth; 
+  }
+}
